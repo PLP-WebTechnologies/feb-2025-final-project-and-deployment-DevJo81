@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Interactive Web Experiences | Joan's Blog</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+    <link rel="stylesheet" href="../css/blog-index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">JOAN</div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <article class="blog-post">
+        <header class="post-header">
+            <h1>Building Interactive Web Experiences</h1>
+            <div class="post-meta">
+                <span class="post-date">March 5, 2025</span>
+                <span class="post-author">By Joan Francis</span>
+                <div class="post-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">UX Design</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="post-content">
+            <img src="../assets/blog/interactive-web.jpeg" alt="Interactive Web Development" class="post-featured-image">
+            
+           <!-- Social Sharing -->
+            <div class="share-buttons">
+                <a href="https://twitter.com/" class="share-button" data-platform="twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+                <a href="https://facebook.com/"button class="share-button" data-platform="facebook">
+                    <i class="fab fa-facebook"></i> Share on Facebook
+                </a>
+                <a href="https://linkedin.com/" class="share-button" data-platform="linkedin">
+                    <i class="fab fa-linkedin"></i> Share on LinkedIn
+                </a>
+            </div>
+
+
+            <p class="post-intro">
+                Creating engaging and interactive web experiences is crucial in today's digital landscape. In this post, I'll share my insights on implementing effective user interactions and the tools that make them possible.
+            </p>
+
+            <h2>The Importance of Interactivity</h2>
+            <p>
+                Interactive elements are what transform static websites into engaging applications. They help users understand the interface, provide feedback, and create memorable experiences.
+            </p>
+
+            <h2>Key Components of Interactive Design</h2>
+            <ul>
+                <li><strong>User Feedback:</strong> Immediate responses to user actions</li>
+                <li><strong>State Management:</strong> Handling different UI states effectively</li>
+                <li><strong>Event Handling:</strong> Responding to user interactions</li>
+                <li><strong>Accessibility:</strong> Ensuring interactions work for all users</li>
+            </ul>
+
+            <h2>Event Handling in JavaScript</h2>
+            <p>
+                Here's an example of implementing interactive features using JavaScript events:
+            </p>
+
+            <pre><code>
+// Event delegation for better performance
+document.querySelector('.interactive-container').addEventListener('click', (e) => {
+    if (e.target.matches('.interactive-element')) {
+        // Handle the interaction
+        e.target.classList.toggle('active');
+        
+        // Provide visual feedback
+        const feedback = document.createElement('div');
+        feedback.className = 'feedback-message';
+        feedback.textContent = 'Action completed!';
+        e.target.appendChild(feedback);
+        
+        // Remove feedback after animation
+        setTimeout(() => feedback.remove(), 1000);
+    }
+});
+            </code></pre>
+
+            <h2>Creating Responsive Interactions</h2>
+            <p>
+                Modern web applications need to work across different devices and input methods:
+            </p>
+            <ul>
+                <li>Touch events for mobile devices</li>
+                <li>Keyboard navigation for accessibility</li>
+                <li>Mouse interactions for desktop</li>
+                <li>Responsive design considerations</li>
+            </ul>
+
+            <h2>Best Practices for Interactive Elements</h2>
+            <p>
+                To create effective interactive experiences, consider these guidelines:
+            </p>
+            <ul>
+                <li>Provide clear visual feedback for all interactions</li>
+                <li>Keep interactions simple and intuitive</li>
+                <li>Ensure consistent behavior across the application</li>
+                <li>Test interactions on different devices and browsers</li>
+                <li>Consider loading states and error handling</li>
+            </ul>
+
+            <h2>Real-World Implementation</h2>
+            <p>
+                In my recent project, I focused on creating a seamless interactive experience:
+            </p>
+            <ul>
+                <li>Implemented smooth form interactions</li>
+                <li>Added drag-and-drop functionality</li>
+                <li>Created dynamic content updates</li>
+                <li>Integrated real-time feedback systems</li>
+            </ul>
+
+            <div class="post-cta">
+                <p>Want to see these interactive features in action? Check out my <a href="https://my-repository-7d4odqw9r-devjo81s-projects.vercel.app/">project demo</a> where I implemented these concepts!</p>
+            </div>
+
+            <div class="post-comments">
+                <h3>Comments</h3>
+                <div class="comments-list">
+                    <!-- Comments will be loaded here -->
+                </div>
+                <div class="comment-form">
+                    <input type="text" name="name" placeholder="Your name (optional)" class="comment-name">
+                    <textarea placeholder="Share your thoughts..."></textarea>
+                    <button class="submit-comment">Post Comment</button>
+                </div>
+            </div>
+
+            <div class="post-navigation">
+                <a href="css-animations.html" class="prev-post"><i class="fas fa-arrow-left"></i> Mastering CSS Animations</a>
+                <a href="#" class="next-post">Coming Soon <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <p>@2025 Joan Francis. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+    <script type="module" src="../js/blog.js"></script>
+</body>
+</html> 

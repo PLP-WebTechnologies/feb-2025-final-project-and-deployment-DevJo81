@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding DOM Manipulation in JavaScript | Joan's Blog</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog-index.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">JOAN</div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <article class="blog-post">
+        <header class="post-header">
+            <h1>Understanding DOM Manipulation in JavaScript</h1>
+            <div class="post-meta">
+                <span class="post-date">March 15, 2025</span>
+                <span class="post-author">By Joan Francis</span>
+                <div class="post-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Web Development</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="post-content">
+            <img src="../assets/blog/javascript-dom.jpeg" alt="JavaScript DOM Manipulation" class="post-featured-image">
+            
+            <!-- Social Sharing -->
+            <div class="share-buttons">
+                <a href="https://twitter.com/" class="share-button" data-platform="twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+                <a href="https://facebook.com/"button class="share-button" data-platform="facebook">
+                    <i class="fab fa-facebook"></i> Share on Facebook
+                </a>
+                <a href="https://linkedin.com/" class="share-button" data-platform="linkedin">
+                    <i class="fab fa-linkedin"></i> Share on LinkedIn
+                </a>
+            </div>
+
+
+            <p class="post-intro">
+                The Document Object Model (DOM) is a crucial concept in web development that allows us to create dynamic and interactive web applications. In this post, I'll share my journey of learning DOM manipulation and how it transformed my approach to web development.
+            </p>
+
+            <h2>What is the DOM?</h2>
+            <p>
+                The DOM is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. Think of it as a tree-like structure where each node represents a part of the document.
+            </p>
+
+            <h2>Key Concepts I Learned</h2>
+            <ul>
+                <li>Selecting elements using various methods (getElementById, querySelector, etc.)</li>
+                <li>Modifying element content and attributes</li>
+                <li>Creating and removing elements dynamically</li>
+                <li>Event handling and delegation</li>
+                <li>Working with forms and user input</li>
+            </ul>
+
+            <h2>Practical Example</h2>
+            <p>
+                In my recent project, I implemented a dynamic task list that demonstrates these concepts. Here's a simplified version of the code:
+            </p>
+
+            <pre><code>
+// Selecting elements
+const taskList = document.querySelector('.task-list');
+const addButton = document.querySelector('.add-task');
+
+// Adding event listeners
+addButton.addEventListener('click', () => {
+    const newTask = document.createElement('li');
+    newTask.textContent = 'New Task';
+    taskList.appendChild(newTask);
+});
+            </code></pre>
+
+            <h2>Best Practices</h2>
+            <p>
+                Through my experience, I've learned several best practices for DOM manipulation:
+            </p>
+            <ul>
+                <li>Cache DOM selections when possible</li>
+                <li>Use event delegation for better performance</li>
+                <li>Batch DOM updates to minimize reflows</li>
+                <li>Use modern methods like querySelector for flexibility</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>
+                Understanding DOM manipulation has been a game-changer in my web development journey. It's not just about making things move on the screen – it's about creating responsive, user-friendly applications that provide real value to users.
+            </p>
+
+            <div class="post-cta">
+                <p>Want to see this in action? Check out my <a href="https://plp-webtechnologies.github.io/feb-2025-introduction-to-javascript-and-dom-manipulation-DevJo81/">project demo</a> where I implemented these concepts!</p>
+            </div>
+        </div>
+
+        <div class="post-comments">
+                <h3>Comments</h3>
+                <div class="comments-list">
+                    <!-- Comments will be loaded here -->
+                </div>
+                <div class="comment-form">
+                    <input type="text" name="name" placeholder="Your name (optional)" class="comment-name">
+                    <textarea placeholder="Share your thoughts..."></textarea>
+                    <button class="submit-comment">Post Comment</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-navigation">
+            <a href="#" class="prev-post"><i class="fas fa-arrow-left"></i> Previous Post</a>
+            <a href="../blog/css-animations.html" class="next-post">Next Post <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </article>
+
+    <footer>
+        <p>@2025 Joan Francis. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+    <script type="module" src="../js/blog.js"></script>
+</body>
+</html> 

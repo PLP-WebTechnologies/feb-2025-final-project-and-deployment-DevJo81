@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering CSS Animations and Transitions | Joan's Blog</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog-index.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Add Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">JOAN</div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <article class="blog-post">
+        <header class="post-header">
+            <h1>Mastering CSS Animations and Transitions</h1>
+            <div class="post-meta">
+                <span class="post-date">March 10, 2025</span>
+                <span class="post-author">By Joan Francis</span>
+                <div class="post-tags">
+                    <span class="tag">CSS</span>
+                    <span class="tag">Animation</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="post-content">
+            <img src="../assets/blog/css-animations.jpeg" alt="CSS Animations" class="post-featured-image" data-src="../assets/blog/css-animations.jpeg">
+            
+            <!-- Social Sharing -->
+            <div class="share-buttons">
+                <a href="https://twitter.com/" class="share-button" data-platform="twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+                <a href="https://facebook.com/"button class="share-button" data-platform="facebook">
+                    <i class="fab fa-facebook"></i> Share on Facebook
+                </a>
+                <a href="https://linkedin.com/" class="share-button" data-platform="linkedin">
+                    <i class="fab fa-linkedin"></i> Share on LinkedIn
+                </a>
+            </div>
+
+            <p class="post-intro">
+                CSS animations and transitions have revolutionized the way we create engaging user interfaces. In this post, I'll share my experience with implementing smooth animations and how they can enhance user experience when used effectively.
+            </p>
+
+            <h2>The Power of CSS Animations</h2>
+            <p>
+                CSS animations allow us to create smooth, performant animations without relying on JavaScript. They're perfect for adding subtle interactions that make our websites feel more polished and professional.
+            </p>
+
+            <h2>Understanding Transitions vs Animations</h2>
+            <p>
+                While both transitions and animations can create movement on the web, they serve different purposes:
+            </p>
+            <ul>
+                <li><strong>Transitions:</strong> Simple state changes (like hover effects)</li>
+                <li><strong>Animations:</strong> Complex, multi-step movements</li>
+            </ul>
+
+            <h2>Basic Transition Example</h2>
+            <p>
+                Here's a simple example of a button transition:
+            </p>
+
+            <pre><code>
+.button {
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+            </code></pre>
+
+            <h2>Creating Keyframe Animations</h2>
+            <p>
+                For more complex animations, we can use @keyframes:
+            </p>
+
+            <pre><code>
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-element {
+    animation: fadeIn 0.5s ease-out;
+}
+            </code></pre>
+
+            <h2>Performance Considerations</h2>
+            <p>
+                When implementing animations, it's crucial to consider performance:
+            </p>
+            <ul>
+                <li>Use transform and opacity for smooth animations</li>
+                <li>Avoid animating layout properties (width, height, margin)</li>
+                <li>Keep animations short and purposeful</li>
+                <li>Consider reducing motion for users who prefer it</li>
+            </ul>
+
+            <h2>Real-World Application</h2>
+            <p>
+                In my recent project, I implemented several animations to enhance user experience:
+            </p>
+            <ul>
+                <li>Smooth page transitions</li>
+                <li>Loading states with subtle animations</li>
+                <li>Interactive hover effects</li>
+                <li>Scroll-triggered animations</li>
+            </ul>
+
+            <div class="post-cta">
+                <p>Want to see these animations in action? Check out my <a href="https://plp-webtechnologies.github.io/feb-2025-css3-transitions-animations-js-functions-DevJo81/">project demo</a> where I implemented these techniques!</p>
+            </div>
+
+            <div class="post-comments">
+                <h3>Comments</h3>
+                <div class="comments-list">
+                    <!-- Comments will be loaded here -->
+                </div>
+                <div class="comment-form">
+                    <input type="text" name="name" placeholder="Your name (optional)" class="comment-name">
+                    <textarea placeholder="Share your thoughts..."></textarea>
+                    <button type="submit" class="submit-comment">Post Comment</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-navigation">
+            <a href="javascript-dom-manipulation.html" class="prev-post"><i class="fas fa-arrow-left"></i> Understanding DOM Manipulation</a>
+            <a href="interactive-web.html" class="next-post">Building Interactive Web Experiences <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </article>
+
+    <footer>
+        <p>@2025 Joan Francis. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+    <script type="module" src="../js/blog.js"></script>
+</body>
+</html> 

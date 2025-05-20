@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Joan's Web Development Insights</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog-index.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">JOAN</div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <h1>Web Development Blog</h1>
+        <p>Insights, tutorials, and thoughts on modern web development</p>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="blog-controls">
+        <div class="blog-search">
+            <input type="text" placeholder="Search posts...">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="blog-filters">
+            <button class="filter-tag active" data-tag="all">All</button>
+            <button class="filter-tag" data-tag="javascript">JavaScript</button>
+            <button class="filter-tag" data-tag="css">CSS</button>
+            <button class="filter-tag" data-tag="ux">UX Design</button>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <main class="blog-grid">
+        <!-- JavaScript DOM Post -->
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img class="lazy" data-src="../assets/blog/javascript-dom.jpg" alt="JavaScript DOM Manipulation">
+            </div>
+            <div class="blog-card-content">
+                <div class="blog-card-tags">
+                    <span class="blog-card-tag">JavaScript</span>
+                </div>
+                <h2 class="blog-card-title">Understanding DOM Manipulation</h2>
+                <p class="blog-card-excerpt">Learn how to effectively manipulate the DOM using JavaScript, with practical examples and best practices.</p>
+                <div class="blog-card-meta">
+                    <span class="blog-card-date">March 15, 2025</span>
+                    <a href="javascript-dom-manipulation.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <!-- CSS Animations Post -->
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img class="lazy" data-src="../assets/blog/css-animations.jpg" alt="CSS Animations">
+            </div>
+            <div class="blog-card-content">
+                <div class="blog-card-tags">
+                    <span class="blog-card-tag">CSS</span>
+                </div>
+                <h2 class="blog-card-title">Mastering CSS Animations and Transitions</h2>
+                <p class="blog-card-excerpt">Explore the power of CSS animations and transitions to create engaging user interfaces.</p>
+                <div class="blog-card-meta">
+                    <span class="blog-card-date">March 10, 2025</span>
+                    <a href="css-animations.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Interactive Web Post -->
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img class="lazy" data-src="../assets/blog/interactive-web.jpg" alt="Interactive Web Development">
+            </div>
+            <div class="blog-card-content">
+                <div class="blog-card-tags">
+                    <span class="blog-card-tag">JavaScript</span>
+                    <span class="blog-card-tag">UX Design</span>
+                </div>
+                <h2 class="blog-card-title">Building Interactive Web Experiences</h2>
+                <p class="blog-card-excerpt">Discover how to create engaging and interactive web experiences that delight users.</p>
+                <div class="blog-card-meta">
+                    <span class="blog-card-date">March 5, 2025</span>
+                    <a href="interactive-web.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Pagination -->
+    <div class="pagination"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>@2025 Joan Francis. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+    <script type="module" src="../js/blog.js"></script>
+</body>
+</html> 
